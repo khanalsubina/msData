@@ -1,0 +1,2 @@
+model,setting,dataset,rmse,mae
+Chronos-Zeroshot,univariate,youtube_static,0.031243720487182304,0.018470431600057697

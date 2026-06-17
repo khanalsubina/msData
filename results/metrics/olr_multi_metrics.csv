@@ -1,0 +1,2 @@
+model,setting,dataset,rmse,mae
+OLR,multivariate,youtube_static,0.05551260363111223,0.030975224625994027
