@@ -1,0 +1,7 @@
+name: river-env
+channels:
+  - defaults
+dependencies:
+  - python=3.11
+  - ipykernel
+prefix: C:\Users\<USERNAME>\AppData\Local\anaconda3\envs\river-env
