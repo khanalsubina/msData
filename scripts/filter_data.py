@@ -22,7 +22,8 @@ def main():
 
     filter_pairs = [
     ("youtube", "static"),
-    ("Web Browsing", "train")
+    ("Web Browsing", "train"),
+    ("youtube", "pedestrian")
 ]
 
     for label, mob in filter_pairs:
