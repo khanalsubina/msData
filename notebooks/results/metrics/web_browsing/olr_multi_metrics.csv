@@ -1,0 +1,2 @@
+model,setting,dataset,rmse,mae
+OLR,multivariate,web_browsing,0.08168713815641865,0.056686142695899826

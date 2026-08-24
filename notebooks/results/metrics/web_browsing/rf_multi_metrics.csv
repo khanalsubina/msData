@@ -1,0 +1,2 @@
+model,setting,dataset,rmse,mae
+Random Forest,multivariate,web_browsing,0.0740199214540794,0.05364556749992754

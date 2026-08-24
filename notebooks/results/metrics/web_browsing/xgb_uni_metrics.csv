@@ -1,0 +1,2 @@
+model,setting,dataset,rmse,mae
+XGB,univariate,web_browsing,0.0774496426141455,0.05356206614013225

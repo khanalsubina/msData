@@ -1,0 +1,3 @@
+model,variant,setting,dataset,rmse,mae
+TTM,zero_shot,univariate,web_browsing,0.0717761727321884,0.04600432142615318
+TTM,fine-tuning,univariate,web_browsing,0.07185033084618007,0.04746086522936821

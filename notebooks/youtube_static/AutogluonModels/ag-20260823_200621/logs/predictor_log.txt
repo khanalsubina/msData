@@ -1,0 +1,106 @@
+Frequency 'ms' stored as 'L'
+Beginning AutoGluon training...
+AutoGluon will save models to 'C:\Users\EJ17UF\OneDrive - Aalborg Universitet\Desktop\ms\notebooks\youtube_static\AutogluonModels\ag-20260823_200621'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.18
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26200
+CPU Count:          8
+GPU Count:          0
+Memory Avail:       22.32 GB / 31.73 GB (70.3%)
+Disk Space Avail:   220.27 GB / 475.70 GB (46.3%)
+===================================================
+Setting presets to: bolt_small
+
+Fitting with arguments:
+{'enable_ensemble': True,
+ 'eval_metric': WQL,
+ 'freq': 'L',
+ 'hyperparameters': {'Chronos': {'model_path': 'bolt_small'}},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 96,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': True,
+ 'target': 'target',
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 'L'.
+Provided train_data has 58430 rows (NaN fraction=55.1%), 77 time series. Median time series length is 225 (min=1, max=16758). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'WQL'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2026-08-23 22:06:28
+Models that will be trained: ['Chronos[bolt_small]']
+Training timeseries model Chronos[bolt_small]. 
+	47.85   s     = Training runtime
+Training complete. Models trained: ['Chronos[bolt_small]']
+Total runtime: 48.06 s
+Best model: Chronos[bolt_small]
+Model not specified in predict, will default to the model with the best validation score: Chronos[bolt_small]
+Model Chronos[bolt_small] failed to predict with the following exception:
+Traceback (most recent call last):
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\autogluon\timeseries\trainer.py", line 1081, in get_model_pred_dict
+    model_pred_dict[model_name] = self._predict_model(
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\autogluon\timeseries\trainer.py", line 1010, in _predict_model
+    return model.predict(model_inputs, known_covariates=known_covariates)
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\autogluon\timeseries\models\abstract\abstract_timeseries_model.py", line 591, in predict
+    predictions = self._predict(data=data, known_covariates=known_covariates, **kwargs)
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\autogluon\timeseries\models\chronos\model.py", line 642, in _predict
+    qs, mn = self.model_pipeline.predict_quantiles(
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\autogluon\timeseries\models\chronos\pipeline\chronos_bolt.py", line 450, in predict_quantiles
+    self.predict(
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\autogluon\timeseries\models\chronos\pipeline\chronos_bolt.py", line 425, in predict
+    prediction = self.model(
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\torch\nn\modules\module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\torch\nn\modules\module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\autogluon\timeseries\models\chronos\pipeline\chronos_bolt.py", line 278, in forward
+    sequence_output = self.decode(input_embeds, attention_mask, hidden_states)
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\autogluon\timeseries\models\chronos\pipeline\chronos_bolt.py", line 364, in decode
+    decoder_outputs = self.decoder(
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\torch\nn\modules\module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\torch\nn\modules\module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\transformers\models\t5\modeling_t5.py", line 1100, in forward
+    layer_outputs = layer_module(
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\transformers\modeling_layers.py", line 94, in __call__
+    return super().__call__(*args, **kwargs)
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\torch\nn\modules\module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\torch\nn\modules\module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\transformers\utils\deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\transformers\models\t5\modeling_t5.py", line 711, in forward
+    cross_attention_outputs = self.layer[1](
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\torch\nn\modules\module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\torch\nn\modules\module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\transformers\utils\deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\transformers\models\t5\modeling_t5.py", line 640, in forward
+    attention_output = self.EncDecAttention(
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\torch\nn\modules\module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\torch\nn\modules\module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\transformers\utils\deprecation.py", line 172, in wrapped_func
+    return func(*args, **kwargs)
+  File "C:\Users\EJ17UF\AppData\Local\anaconda3\envs\tf-env\lib\site-packages\transformers\models\t5\modeling_t5.py", line 549, in forward
+    position_bias = position_bias + causal_mask
+RuntimeError: The size of tensor a (8) must match the size of tensor b (7) at non-singleton dimension 3
+

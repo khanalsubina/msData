@@ -1,0 +1,2 @@
+model,setting,dataset,rmse,mae
+PatchTST,univariate,youtube_static,0.032665061732417615,0.021073385802469306

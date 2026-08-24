@@ -1,0 +1,981 @@
+Beginning AutoGluon training...
+AutoGluon will save models to 'c:\Users\EJ17UF\OneDrive - Aalborg Universitet\Desktop\ms\notebooks\Temporal_Resolution\AutogluonModels\ag-20260817_191511'
+=================== System Info ===================
+AutoGluon Version:  1.4.0
+Python Version:     3.10.19
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26200
+CPU Count:          8
+GPU Count:          0
+Memory Avail:       13.20 GB / 31.73 GB (41.6%)
+Disk Space Avail:   194.05 GB / 475.70 GB (40.8%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': False,
+ 'eval_metric': MAE,
+ 'freq': '3000ms',
+ 'hyperparameters': {'Chronos': [{'ag_args': {'name_suffix': 'ZeroShot'},
+                                  'model_path': 'bolt_small'}]},
+ 'known_covariates_names': ['mac_dl_cqi',
+                            'mac_dl_mcs',
+                            'mac_dl_ok',
+                            'mac_dl_nok'],
+ 'num_val_windows': 1,
+ 'prediction_length': 4,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 123,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency '3000ms'.
+Provided train_data has 2361 rows, 135 time series. Median time series length is 8 (min=1, max=73). 
+	Removing 68 short time series from train_data. Only series with length >= 9 will be used for training.
+	After filtering, train_data has 2285 rows, 67 time series. Median time series length is 34 (min=10, max=73). 
+
+Provided data contains following columns:
+	target: 'target'
+	known_covariates:
+		categorical:        []
+		continuous (float): ['mac_dl_cqi', 'mac_dl_mcs', 'mac_dl_ok', 'mac_dl_nok']
+
+To learn how to fix incorrectly inferred types, please see documentation for TimeSeriesPredictor.fit
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2026-08-17 21:15:19
+Models that will be trained: ['ChronosZeroShot[bolt_small]']
+Training timeseries model ChronosZeroShot[bolt_small]. 
+	-350787.3582  = Validation score (-MAE)
+	45.91   s     = Training runtime
+	1.23    s     = Validation (prediction) runtime
+Training complete. Models trained: ['ChronosZeroShot[bolt_small]']
+Total runtime: 47.42 s
+Best model: ChronosZeroShot[bolt_small]
+Best model score: -350787.3582
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]
+data with frequency '3s' has been resampled to frequency '3000ms'.
+Model not specified in predict, will default to the model with the best validation score: ChronosZeroShot[bolt_small]

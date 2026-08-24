@@ -1,0 +1,2 @@
+model,setting,dataset,rmse,mae
+Random Forest,multivariate,youtube_static,0.034157380622671894,0.02259425124274472

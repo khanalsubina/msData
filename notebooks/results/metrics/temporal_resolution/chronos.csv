@@ -1,0 +1,3 @@
+model,variant,dataset,resolution,prediction_horizon,scaled_rmse,scaled_mae
+Chronos,zero_shot,youtube_pedestrian,2000ms,5,0.06714506451719814,0.035394662622646796
+Chronos,zero_shot,youtube_pedestrian,3000ms,4,0.08598773006761813,0.04431417034386802

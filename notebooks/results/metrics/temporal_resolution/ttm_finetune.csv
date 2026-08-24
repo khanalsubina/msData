@@ -1,0 +1,2 @@
+Model,Variant,Dataset,Resolution,Prediction Horizon,scaled_rmse,scaled_mae
+TTM,fine_tuning,youtube_pedestrian,3000ms,96,0.10607425516205529,0.06377382576465607

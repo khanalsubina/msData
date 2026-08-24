@@ -1,0 +1,2 @@
+model,setting,dataset,rmse,mae
+XGB,univariate,youtube_static,0.03536339181920377,0.023194369343980014

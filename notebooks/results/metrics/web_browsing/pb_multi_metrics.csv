@@ -1,0 +1,2 @@
+model,setting,dataset,rmse,mae
+Naive,multivariate,web_browsing,0.07269060228294646,0.04759706473894613

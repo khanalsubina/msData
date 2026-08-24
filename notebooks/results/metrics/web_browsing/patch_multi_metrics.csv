@@ -1,0 +1,2 @@
+model,setting,dataset,rmse,mae
+PatchTST,multivariate,web_browsing,0.07387828747294391,0.04843883524216092

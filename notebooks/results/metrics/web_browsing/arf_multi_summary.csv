@@ -1,0 +1,2 @@
+dataset,horizon,seeds,mean_scaled_rmse,std_scaled_rmse,mean_scaled_mae,std_scaled_mae
+webbrowsing_train,96,42,0.03517450491802446,0.0,0.018025572850306704,0.0

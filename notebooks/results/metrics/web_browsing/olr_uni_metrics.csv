@@ -1,0 +1,2 @@
+model,setting,dataset,rmse,mae
+OLR,univariate,web_browsing,0.081869069251022,0.05689329037365317

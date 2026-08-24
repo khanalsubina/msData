@@ -1,0 +1,2 @@
+model,setting,dataset,rmse,mae
+iTransformer,univariate,youtube_static,0.0326566894721311,0.020983430758379842

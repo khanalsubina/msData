@@ -1,0 +1,54 @@
+Frequency 'ms' stored as 'L'
+Beginning AutoGluon training...
+AutoGluon will save models to 'C:\Users\EJ17UF\OneDrive - Aalborg Universitet\Desktop\ms\notebooks\webbrowsing_train\AutogluonModels\ag-20260822_222756'
+=================== System Info ===================
+AutoGluon Version:  1.3.1
+Python Version:     3.10.18
+Operating System:   Windows
+Platform Machine:   AMD64
+Platform Version:   10.0.26200
+CPU Count:          8
+GPU Count:          0
+Memory Avail:       20.93 GB / 31.73 GB (66.0%)
+Disk Space Avail:   220.11 GB / 475.70 GB (46.3%)
+===================================================
+
+Fitting with arguments:
+{'enable_ensemble': False,
+ 'eval_metric': MAE,
+ 'freq': 'L',
+ 'hyperparameters': {'Chronos': [{'ag_args': {'name_suffix': 'FineTuned'},
+                                  'fine_tune': True,
+                                  'model_path': 'bolt_small'}]},
+ 'known_covariates_names': [],
+ 'num_val_windows': 1,
+ 'prediction_length': 96,
+ 'quantile_levels': [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9],
+ 'random_seed': 42,
+ 'refit_every_n_windows': 1,
+ 'refit_full': False,
+ 'skip_model_selection': False,
+ 'target': 'target',
+ 'verbosity': 2}
+
+train_data with frequency 'IRREG' has been resampled to frequency 'L'.
+Provided train_data has 25433 rows (NaN fraction=43.8%), 55 time series. Median time series length is 123 (min=1, max=5791). 
+	Removing 31 short time series from train_data. Only series with length >= 193 will be used for training.
+	After filtering, train_data has 23646 rows (NaN fraction=47.1%), 24 time series. Median time series length is 502 (min=211, max=5791). 
+
+Provided data contains following columns:
+	target: 'target'
+
+AutoGluon will gauge predictive performance using evaluation metric: 'MAE'
+	This metric's sign has been flipped to adhere to being higher_is_better. The metric score can be multiplied by -1 to get the metric value.
+===================================================
+
+Starting training. Start time is 2026-08-23 00:28:01
+Models that will be trained: ['ChronosFineTuned[bolt_small]']
+Training timeseries model ChronosFineTuned[bolt_small]. 
+	Fine-tuning on the CPU detected. We recommend using a GPU for faster fine-tuning of Chronos.
+	Warning: Exception caused ChronosFineTuned[bolt_small] to fail during training... Skipping this model.
+	The size of tensor a (130) must match the size of tensor b (129) at non-singleton dimension 3
+Training complete. Models trained: []
+Total runtime: 19.08 s
+Trainer has no fit models that can predict.

@@ -1,0 +1,2 @@
+model,setting,dataset,rmse,mae
+TTM-Finetuning,multivariate,youtube_static,0.04122537810758827,0.02702637016773224

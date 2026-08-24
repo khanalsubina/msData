@@ -1,0 +1,7 @@
+Model,Variant,Dataset,Resolution,Prediction Horizon,scaled_rmse,scaled_mae
+TTM,zero_shot,youtube_pedestrian,100ms,96,0.076521447303327,0.04340241849422455
+TTM,zero_shot,youtube_pedestrian,200ms,48,0.08701981315253764,0.049851495772600174
+TTM,zero_shot,youtube_pedestrian,500ms,20,0.08554298161221269,0.04904348403215408
+TTM,zero_shot,youtube_pedestrian,1000ms,10,0.08556913408512666,0.05000832676887512
+TTM,zero_shot,youtube_pedestrian,2000ms,5,0.08798227300251736,0.052669625729322433
+TTM,zero_shot,youtube_pedestrian,3000ms,4,0.10485003596789799,0.06183881685137749

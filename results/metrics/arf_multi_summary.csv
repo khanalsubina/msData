@@ -1,2 +1,0 @@
-dataset,horizon,seeds,mean_scaled_rmse,std_scaled_rmse,mean_scaled_mae,std_scaled_mae
-youtube_static,96,42,0.01655585442991036,0.0,0.012307727539708187,0.0

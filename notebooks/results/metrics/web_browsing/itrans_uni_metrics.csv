@@ -1,0 +1,2 @@
+model,setting,dataset,rmse,mae
+iTransformer,univariate,web_browsing,0.07074891844779684,0.04531069583574841

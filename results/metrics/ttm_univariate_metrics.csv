@@ -1,3 +1,0 @@
-model,variant,setting,dataset,rmse,mae
-TTM,zero_shot,univariate,youtube_static,0.03592073701362252,0.022957077249884605
-TTM,fine-tuning,univariate,youtube_static,0.03585350006416134,0.022652706131339073

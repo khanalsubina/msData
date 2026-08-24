@@ -1,14 +1,18 @@
 # Reproducibility Guide: 5G Network Benchmarking Study
 
-This document provides step-by-step instructions to reproduce the main results reported in Table 4 of the paper "msData: A Millisecond-Resolution Network Dataset for Advancing Time Series Foundation Models".
+This document provides step-by-step instructions to reproduce four result tables from the paper "msData: A Millisecond-Resolution Network Dataset for Advancing Time Series Foundation Models".
+
+The reproducibility package covers:
+1. Main univariate and multivariate benchmark results on `youtube_static.csv`
+2. Additional benchmark results on `webbrowsing_train.csv`
+3. Temporal-resolution ablation results on `youtube_pedestrian.csv`
+4. A second ablation study results on `youtube_static.csv` for fine-tuning TTM
 
 ---
 
 ## Quick Start
 
-Follow the steps below to reproduce the main experiments (Table 4) and collect the final results.
-
-> **Important:** All main experiments in this repository use the filtered dataset `youtube_static.csv`.
+Follow the steps below to generate the filtered datasets, run the supported experiments, and collect the final metrics.
 
 ### 1. Create the required conda environments
 
@@ -20,42 +24,73 @@ conda env create -f arf_environment.yml
 conda activate river-env
 ```
 
-For the main experiments in this repository, the dataset used is: data/filtered/youtube_static.csv
+### 2. Prepare the Filtered Datasets
+Place the original dataset in: data/raw/, then run:
+```bash
+python scripts/filter_data.py
+```
+This generates the experiment-ready datasets in: data/filtered/
+The supported experiments use:
 
-### 2. Run the notebook-based experiments
-For univariate experiments:
+> - `data/filtered/youtube_static.csv` for the main benchmarks (Table 4) and TTM fine-tuning (Table 5)
+> - `data/filtered/webbrowsing_train.csv` for the additional filtered data subset experiments (Table 7)
+> - `data/filtered/youtube_pedestrian.csv` for the temporal-resolution ablation study (Table 6)
 
+### 3. To reproduce the main benchmark results (Table 4):
+
+#### 3a. Run the notebook-based experiments:
 ```bash
 conda activate tf-env
-scripts\reproduce_univariate.bat
+scripts\youtube_static\reproduce_univariate.bat
+scripts\youtube_static\reproduce_multivariate.bat
 ```
 
-For multivariate experiments:
+#### 3b. Run ARF and OLR separately:
+```bash
+conda activate river-env
+python scripts/youtube_static/ARF_Univariate.py --seeds 42
+python scripts/youtube_static/ARF_Multivariate.py --seeds 42
+python scripts/youtube_static/OLR_Univariate.py
+python scripts/youtube_static/OLR_Multivariate.py
+```
 
+### 4. To reproduce the additional filtered data subset results (Table 7):
+
+#### 4a. Run the notebook-based experiments:
 ```bash
 conda activate tf-env
-scripts\reproduce_multivariate.bat
+scripts\webbrowsing_train\reproduce_univariate.bat
+scripts\webbrowsing_train\reproduce_multivariate.bat
 ```
 
-### 3. Run ARF and OLR separately
-ARF:
+#### 4b. Run ARF and OLR separately:
+```bash
+conda activate river-env
+python scripts/webbrowsing_train/ARF_Univariate.py --seeds 42
+python scripts/webbrowsing_train/ARF_Multivariate.py --seeds 42
+python scripts/webbrowsing_train/OLR_Univariate.py
+python scripts/webbrowsing_train/OLR_Multivariate.py
+```
+
+### 5. Reproduce the ablation studies (TTM fine-tuning strategies) results (Table 5).
+```bash
+conda activate tf-env
+scripts\fine-tuning_TTM\reproduce_fine-tuning.bat
+```
+
+### 6. Reproduce the ablation studies (Temporal resolution) results (Table 6).
+```bash
+conda activate tf-env
+scripts\temporal_resolution\reproduce_tempresolution.bat
+```
 
 ```bash
 conda activate river-env
-python scripts\ARF_Univariate.py --seeds 42
-python scripts\ARF_Multivariate.py --seeds 42
+scripts\temporal_resolution\arf_tempresolution.bat
 ```
 
-OLR:
-
-```bash
-conda activate river-env
-python scripts\OLR_Multivariate.py
-python scripts\OLR_Univariate.py
-```
-
-### 4. Output Location
-The saved metrics are written to: results/metrics/
+### 7. Output Location
+The saved metrics are written to: notebooks/results/metrics/
 
 ---
 
@@ -71,7 +106,8 @@ The repository is organized as follows:
 - `data/filtered/`: filtered datasets generated before model execution
 - `notebooks/`: experiment notebooks for all models
 - `scripts/`: helper scripts, Python runners, and Windows batch files
-- `results/metrics/`: saved model metrics
+- `notebooks/results/metrics/`: saved model metrics
+- `executed_notebooks/`: saved executed notebooks run from scripts
 
 ```
 tmlr-reproducibility/
@@ -79,15 +115,28 @@ tmlr-reproducibility/
 ├── REPRODUCIBILITY.md
 ├── environment.yml
 ├── arf_environment.yml
+├── test_imports.py
 ├── data/
 │   ├── raw/
+│   │   └── 5G_millisecond.csv
 │   └── filtered/
+│       ├── youtube_static.csv
+│       ├── webbrowsing_train.csv
+│       └── youtube_pedestrian.csv
 ├── notebooks/
+│   ├── Fine-Tuning_strategies_for_TTM/
+│   ├── results/
+│   ├── Temporal_Resolution/
+│   ├── webbrowsing_train/
+│   ├── youtube_static/
 ├── scripts/
-└── results/
-    ├── metrics/
-    ├── forecasts/
-    └── figures/
+│   ├── filter_data.py
+│   ├── youtube_static/
+│   ├── webbrowsing_train/
+│   └── temporal_resolution/
+│   └── fine-tuning_TTM/
+├── executed_notebooks/
+    
 ```
 
 ---
@@ -206,48 +255,64 @@ python test_imports.py
 ## Dataset Preparation
 
 ### 1. Filter Dataset
-Before running any model, generate the filtered datasets. This creates two CSV files:
+Before running any model, generate the filtered datasets. This creates three CSV files:
 - `youtube_static.csv`
-- `Web_Browsing_train.csv`
+- `webbrowsing_train.csv`
+- `youtube_pedestrian.csv`
 
 ```bash
 python scripts/filter_data.py
 ```
 
-Note: The main experiments reported in this reproducibility guide use youtube_static.csv.
+The filtered subsets used in the experiments are:
 
-### 2. Verify Dataset
+| Dataset | Traffic Class | Mobility Pattern | Timestamp Interval | Usage |
+|---|---|---|---:|---|
+| `youtube_static.csv` | Video streaming (YouTube) | Static | 1 ms | Main univariate and multivariate benchmarks and TTM Fine-tuning |
+| `webbrowsing_train.csv` | Web browsing | Train | 1 ms | Additional dataset experiments |
+| `youtube_pedestrian.csv` | Video streaming (YouTube) | Pedestrian | 100 ms | Temporal-resolution ablation study |
 
-Run:
-```bash
-python scripts/verify_dataset.py
-```
+
+## Temporal-Resolution Ablation Setup
+The temporal-resolution ablation uses youtube_pedestrian.csv. The resampled datasets are generated during execution and are not saved as separate CSV files. Only the final metrics are saved. The data is resampled in memory to the following temporal resolutions:
+
+| Resolution | Prediction Horizon |
+|---|---:|
+| 100 ms | 96 |
+| 200 ms | 48 |
+| 500 ms | 20 |
+| 1000 ms | 10 |
+| 2000 ms | 5 |
+| 3000 ms | 4 |
+
 
 ---
 
 ## Reproducing Experiments
-
-### Main Results (Table 4: Performance Metrics)
-
-To reproduce the main experiments, use the commands below.
 
 ## Windows Note
 
 This repository provides Windows batch files (`.bat`) for notebook execution.  
 Run them from Anaconda Prompt or Command Prompt after activating the correct conda environment.
 
-### Notebook-based experiments (tf-env)
+### Table 4: Main Performance Results
 
+To reproduce the main experiments, use the commands below.
+
+### Dataset:
+data/filtered/youtube_static.csv
+
+### Notebook-based experiments (tf-env)
 Run the multivariate notebook group using the appropriate batch file:
 ```bash
 conda activate tf-env
-scripts\reproduce_multivariate.bat
+scripts\youtube_static\reproduce_multivariate.bat
 ```
 
 Run the univariate notebook group using the appropriate batch file:
 ```bash
 conda activate tf-env
-scripts\reproduce_univariate.bat
+scripts\youtube_static\reproduce_univariate.bat
 ```
 
 The ARF and OLR experiments are run separately in the River/streaming-model environment. 
@@ -255,28 +320,86 @@ Run ARF:
 
 ```bash
 conda activate river-env
-python scripts\ARF_Univariate.py --seeds 42
-python scripts\ARF_Multivariate.py --seeds 42
+python scripts/youtube_static/ARF_Univariate.py --seeds 42
+python scripts/youtube_static/ARF_Multivariate.py --seeds 42
 ```
 Run OLR:
 
 ```bash
 conda activate river-env
-python scripts\OLR_Univariate.py 
-python scripts\OLR_Multivariate.py 
+python scripts/youtube_static/OLR_Univariate.py 
+python scripts/youtube_static/OLR_Multivariate.py 
 ```
 
 ### Lag-Llama
 Lag-Llama requires a one-time external setup before the zero-shot or fine-tuning notebook can be executed, as mentioned above (Installation). After completing the one-time setup, run the Lag-Llama notebook.
 
-### Outputs
-All Model Outputs are saved in: results/metrics/
+### Table 7: Additional Filtered Data Subset Results
 
+To reproduce the additional filtered data subset experiments, use the commands below.
 
-## Collecting Results
-After all models have finished running, combine the saved metrics into a single summary table:
+### Dataset:
+data/filtered/webbrowsing_train.csv
+
+### Notebook-based experiments (tf-env)
+Run the multivariate notebook group using the appropriate batch file:
+```bash
+conda activate tf-env
+scripts\webbrowsing_train\reproduce_multivariate.bat
+```
+
+Run the univariate notebook group using the appropriate batch file:
+```bash
+conda activate tf-env
+scripts\webbrowsing_train\reproduce_univariate.bat
+```
+
+The ARF and OLR experiments are run separately in the River/streaming-model environment. 
+Run ARF:
 
 ```bash
-python scripts\collect_results.py
+conda activate river-env
+python scripts/webbrowsing_train/ARF_Univariate.py --seeds 42
+python scripts/webbrowsing_train/ARF_Multivariate.py --seeds 42
 ```
+Run OLR:
+
+```bash
+conda activate river-env
+python scripts/webbrowsing_train/OLR_Univariate.py 
+python scripts/webbrowsing_train/OLR_Multivariate.py 
+```
+
+### Table 5: TTM fine-tuning strategies Results
+
+To reproduce the TTM fine-tuning strategies experiments, use the commands below.
+
+### Dataset:
+data/filtered/youtube_static.csv
+
+### Notebook-based experiments (tf-env)
+```bash
+conda activate tf-env
+scripts\fine-tuning_TTM\reproduce_fine-tuning.bat
+```
+
+### Table 6: Temporal Resolution Results
+
+To reproduce the temporal resolution experiments, use the commands below.
+
+### Dataset:
+data/filtered/youtube_pedestrian.csv
+
+```bash
+conda activate tf-env
+scripts\temporal_resolution\reproduce_tempresolution.bat
+```
+
+```bash
+conda activate river-env
+scripts\temporal_resolution\arf_tempresolution.bat
+```
+
+### Outputs
+All Model Outputs are saved in: notebooks/results/metrics/
 
