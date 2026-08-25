@@ -103,7 +103,7 @@ For detailed setup instructions, model-specific installation steps, and full exp
 ---
 
 ## Dataset
-**Raw Data**: `5G_millisecond.csv` (Download the raw data from: https://huggingface.co/datasets/subinak/Open_RAN_Performance_Measurement_Dataset_with_Traffic_and_Mobility_Labels}{Hugging Face})
+**Raw Data**: `5G_millisecond.csv` (Download the raw data from: https://huggingface.co/datasets/subinak/Open_RAN_Performance_Measurement_Dataset_with_Traffic_and_Mobility_Labels)
 
 **Experiment dataset**: The experiment-ready datasets are generated using:
 
